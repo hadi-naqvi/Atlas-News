@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function signUp() {
+        document.getElementById("signup-form").action = "/signup";
+        document.getElementById("submit-button").value = "Sign Up";
+      }
+      function signIn() {
+        document.getElementById("signup-form").action = "/login.html";
+        document.getElementById("submit-button").value = "Log In";
+      }
+    </script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="/static/login.css">
+  <header id="navbar">
+    <div id="page-links">
+        <img src="static/logo.png" alt="">
+        <a href="/"><center>Atlas News</center></a>
+        <a href="login.html"><center>Login</center></a>
+    </div>
+</header>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <a href="javascript:signIn();" class="inactive underlineHover"> Sign In </a>
+      <a href="javascript:signUp();" class="inactive underlineHover" >Sign Up </a>
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="static/logo.png" id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- Login Form -->
+      <form id="signup-form" action="/login.html" method="POST">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+        <input id="submit-button" type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+    </div>
+  </div>
+  </body>
+</html>
